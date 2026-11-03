@@ -1,0 +1,19 @@
+main:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Research
+    url: /research/
+  - title: Projects
+    url: /projects/
+  - title: Publications
+    url: /publications/
+  - title: Teaching
+    url: /teaching/
+  - title: Talks & News
+    url: /activity/
+  - title: Service
+    url: /service/
+  - title: CV & Contact
+    url: /cv/

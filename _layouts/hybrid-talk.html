@@ -1,0 +1,9 @@
+---
+layout: hybrid
+---
+<p class="eyebrow">Research presentation · {{ page.date | date: '%B %Y' }}</p>
+<h1>{{ page.title }}</h1>
+<p class="intro">{{ page.event }}</p>
+<p><span class="pill">{{ page.status }}</span></p>
+<div class="entry-body">{{ content }}</div>
+<p><a href="{{ '/activity/' | relative_url }}">← Talks & News</a></p>

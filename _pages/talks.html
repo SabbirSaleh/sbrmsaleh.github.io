@@ -1,16 +1,17 @@
 ---
-layout: archive
-title: "Talks and presentations"
-permalink: /talks/
-author_profile: true
+layout: "hybrid"
+title: "Talks & News"
+permalink: "/activity/"
 ---
 
-{% if site.talkmap_link == true %}
+<p class="eyebrow">Presentations and updates</p>
+# Talks & News
 
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
+## News
 
-{% endif %}
+<div class="feed">{% for item in site.data.hybrid_news %}<article class="feed-item"><span>{{ item.label }}</span><div><strong>{{ item.title }}</strong><p>{{ item.detail }}</p></div></article>{% endfor %}</div>
 
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
-{% endfor %}
+## Presentations and posters
+
+{% assign sorted_talks = site.talks | sort: 'date' | reverse %}
+<div class="feed">{% for talk in sorted_talks %}<article class="paper"><p class="eyebrow">{{ talk.date | date: '%B %Y' }} · {{ talk.status }}</p><h3><a href="{{ talk.url | relative_url }}">{{ talk.title }}</a></h3><p class="fine">{{ talk.event }}</p></article>{% endfor %}</div>
