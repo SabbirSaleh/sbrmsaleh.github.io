@@ -1,59 +1,27 @@
 ---
-layout: archive
-title: "CV"
-permalink: /cv/
-author_profile: true
-redirect_from:
-  - /resume
+layout: "hybrid"
+title: "CV & Contact"
+permalink: "/cv/"
 ---
 
-{% include base_path %}
+<p class="eyebrow">Profile and contact</p>
+# CV & Contact
 
-Education
-======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+<p class="intro">Sabbir Muhammad Saleh · Department of Computer Science, Western University</p>
 
-Work experience
-======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+<a class="button" href="{{ site.data.hybrid_profile.cv | relative_url }}" target="_blank" rel="noopener noreferrer">Download academic CV (PDF) ↗</a>
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+<small>The public PDF is managed separately. Upload a privacy-reviewed copy before deployment. Do not commit private addresses, phone numbers or referee contact details.</small>
 
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+## Contact
+
+Email: [{{ site.data.hybrid_profile.email }}](mailto:{{ site.data.hybrid_profile.email }})
+
+London, Ontario, Canada
+
+## Academic profiles
+
+- [Google Scholar]({{ site.data.hybrid_profile.scholar }})
+- [ORCID]({{ site.data.hybrid_profile.orcid }})
+- [GitHub]({{ site.data.hybrid_profile.github }})
+- [LinkedIn]({{ site.data.hybrid_profile.linkedin }})

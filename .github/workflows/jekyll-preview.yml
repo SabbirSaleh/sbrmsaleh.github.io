@@ -1,0 +1,37 @@
+name: Jekyll preview build
+on:
+  push:
+    branches:
+      - website/hyde-academic-migration-2026
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+      - name: Install Ruby dependencies
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+      - name: Build Jekyll
+        run: bundle exec jekyll build --trace --destination _site
+      - name: Validate essential routes
+        run: |
+          test -s _site/index.html
+          test -s _site/publications/index.html
+          test -s _site/projects/devseclogs/index.html
+          test -s _site/cv/index.html
+          test -s _site/assets/css/hybrid.css
+      - name: Upload compiled static website
+        uses: actions/upload-artifact@v4
+        with:
+          name: jekyll-site-preview
+          path: _site/
+          retention-days: 7
